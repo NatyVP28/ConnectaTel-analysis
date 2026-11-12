@@ -45,7 +45,7 @@ Análisis exploratorio de los clientes y el consumo de **ConnectaTel**, una empr
 
 | Problema | Dónde | Tratamiento |
 |----------|-------|-------------|
-| Edades con valor centinela **-999** | `users.age` | Imputadas con la mediana (47 años) |
+| Edades con valor centinela **-999** | `users.age` | 55 clientes (1,4 %) imputados con la mediana (47 años) |
 | Ciudades registradas como **"?"** | `users.city` | Marcadas como no disponibles |
 | Ciudad faltante (11,7 %) | `users.city` | Se dejan como nulos |
 | Fechas de registro en **2026** (fuera del periodo) | `users.reg_date` | Marcadas como nulas |
@@ -77,6 +77,8 @@ Se usaron histogramas por tipo de plan y boxplots, y se detectaron outliers con 
 - **3 de cada 4 clientes (≈ 2.950) son de uso medio.** Los de alto uso son un grupo pequeño (≈ 280).
 - **Los adultos son el segmento más grande (≈ 2.000 clientes)**, seguidos por los adultos mayores (≈ 1.200) y los jóvenes (≈ 750).
 - **Adultos y adultos mayores suman cerca del 80 % de la base** y en ambos grupos predomina el uso medio.
+
+> **Limitación:** los 55 clientes con edad imputada (47 años) quedan todos en el segmento *Adulto*. El efecto es pequeño (≈ 3 % de ese segmento), pero conviene tenerlo en cuenta o excluirlos si se toman decisiones por edad.
 
 ### Planes y edad
 
@@ -118,3 +120,4 @@ jupyter notebook ConnectaTel_analisis.ipynb
 
 **Natalia Viloria** · Data Analyst
 📧 natalia.viloria2@gmail.com
+🔗 [LinkedIn](https://www.linkedin.com/in/natalia-j-viloria-p%C3%A9rez-845b695a)
